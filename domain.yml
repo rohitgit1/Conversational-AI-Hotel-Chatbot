@@ -1,0 +1,68 @@
+intents:
+  - greet
+  - goodbye
+  - book_room
+  - no_of_rooms
+  - thanks
+  - request_room_cleaning
+  - time
+  - check_in_timing
+  - check_out_timing
+  - cancel_reservation
+  - cancellation_policy
+  - restaurant
+  - breakfast_avail
+  - breakfast_time
+  - restaurant_timing
+
+responses:
+  utter_greet:
+  - text: "Hey! I am Hotel Assistant!"
+
+  utter_ask_how_many:
+  - text: "Which type of room will you like to be booked?"
+    buttons: 
+      - title: "Simple"
+        payload: "/no_of_rooms"
+  
+      - title: "Deluxe"
+        payload: "/no_of_rooms"
+      
+  
+  utter_booking_room:
+  - text: "Thank You, your rooms have been booked! Have a nice stay!"
+
+  utter_you_are_welcome:
+  - text: "You are Welcome!"
+
+  utter_ask_when:
+  - text: "Okay, at what time do you want it scheduled?"
+
+  utter_cleaning_scheduled:
+  - text: "Thank you, your room cleaning has been scheduled!"
+
+  utter_goodbye:
+  - text: "Bye, Have a great day!"
+
+  utter_room_cancelled:
+  - text: "Your booking has been cancelled. Please visit sometime later, we would love to have you!"
+
+  utter_cancellation_policy:
+  - text: "To cancel a reservation, select the “Reservations” link from the homepage."
+  
+  utter_restaurant:
+  - text: "Yes, the hotel has a restaurant called the Zephyr Bar."
+
+  utter_breakfast_time:
+  - text: "Monday through Friday breakfast is 6 am to 9 am. On Saturday and Sunday, we are open from 7 am to 10:30 am."
+
+  utter_simple:
+  - text: "Okay"
+
+  utter_deluxe:
+  - text: "Okay"
+  
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
